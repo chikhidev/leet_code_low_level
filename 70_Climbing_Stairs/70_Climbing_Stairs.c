@@ -1,23 +1,16 @@
 #include "main.h"
 
-int power_of(int pow){
-    int res;
-    
-    if (pow == 0) return 1;
-    if (pow == 1) return 2;
-
-    res = 0;
-    while (pow > 1){
-        res *= 2;
-        pow--;
-    }
-    return res;
-}
-
 int climbStairs(int n){
-    int power = 0;
-    if (n == 1 || n == 0) return n;
-    if (n >= 2)
-        power = n - 2;
-    return power_of(power) + 1;
+    if (n <= 2) return n;
+
+    int stairs[n+1], inc = 3;
+    stairs[0] = 0;
+    stairs[1] = 1;
+    stairs[2] = 2;
+    
+    while (inc < n + 1){
+        stairs[inc] = stairs[inc - 1] + stairs[inc - 2];
+    }
+
+    return stairs[n];
 }
