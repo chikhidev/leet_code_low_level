@@ -1,0 +1,4 @@
+#!/bin/bash
+../push.sh
+gcc main.c main.h 70_Climbing_Stairs.c -o main
+./main.exe
