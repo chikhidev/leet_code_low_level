@@ -13,11 +13,9 @@ int power_of(int n, int pow){
 }
 
 int climbStairs(int n){
-    int power = 0, factor = 0;
-
+    int power = 0;
+    if (n == (1 || 0)) return n;
     if (n >= 2)
         power = n - 2;
-    factor = power_of(2 , factor) + 1;
-
-    return factor;
+    return power_of(2 , power) + 1;
 }
