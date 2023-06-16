@@ -1,5 +1,7 @@
 #!/bin/bash
 ../push
 gcc main.c main.h func.c -o main
-echo "\nOUTPUT:----------------------------\n"
+echo ""
+echo "OUTPUT:----------------------------"
+echo ""
 ./main.exe
