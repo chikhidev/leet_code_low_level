@@ -5,7 +5,7 @@ int climbStairs(int n){
 
     if (n >= 2)
         power = n - 2;
-    factor = 2 ^ factor + 1;
+    factor = (2 ^ factor) + 1;
 
     return factor;
 }
