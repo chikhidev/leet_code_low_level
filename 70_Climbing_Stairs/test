@@ -1,4 +1,5 @@
 #!/bin/bash
-../push.sh
+../push
 gcc main.c main.h 70_Climbing_Stairs.c -o main
+clear
 ./main.exe
