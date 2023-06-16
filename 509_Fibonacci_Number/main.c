@@ -3,8 +3,9 @@
 int main(){
     int goal = 70;
     
-    while (goal--){
+    while (goal >= 0){
         printf("%d", fib(goal));
+        goal--;
     }
 
     return 0;
