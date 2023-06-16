@@ -8,8 +8,9 @@ int climbStairs(int n){
     stairs[1] = 1;
     stairs[2] = 2;
     
-    while (inc < n + 1){
+    while (inc < (n + 1)){
         stairs[inc] = stairs[inc - 1] + stairs[inc - 2];
+        inc++;
     }
 
     return stairs[n];
