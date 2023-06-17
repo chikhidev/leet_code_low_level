@@ -20,8 +20,18 @@ int T(int n){
     return target;
 }
 
+int POWER(int n) {
+    int result = 1;
+
+    while (n > 0) {
+        result *= 2;
+        n--;
+    }
+    return result;
+}
+
 int tribonacci(int n) {
-    return (2^n + 1);
+    return (POWER(2) + 1);
 }
 
 //T(n+3) = T(n) + T(n+1) + T(n+2)
