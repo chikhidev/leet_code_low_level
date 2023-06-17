@@ -12,7 +12,7 @@ int tribonacci(int n){
 
     while (i <= (n + 1)){
         if (i >= 3)
-            *(FAB + i) = *(FAB + i) + *(FAB + i - 1) + *(FAB + i - 2);
+            *(FAB + i) = *(FAB + i - 3) + *(FAB + i - 1) + *(FAB + i - 2);
         i++;
     }
 
