@@ -1,6 +1,6 @@
 #include "main.h"
 
-int T(int n){
+int tribonacci(int n){
     if (n==0) return 0;
     
     int *FAB = (int*)malloc((n + 1) * sizeof(int));
@@ -8,7 +8,8 @@ int T(int n){
 
     FAB[0] = 0;
     FAB[1] = FAB[2] = 1;
-    while (i <= n){
+
+    while (i <= (n + 1) && i <= 38){
         if (i >= 3)
             *(FAB + i) = *(FAB + i - 1) + *(FAB + i - 2);
         i++;
@@ -20,19 +21,6 @@ int T(int n){
     return target;
 }
 
-int POWER(int n) {
-    int result = 1;
-
-    while (n > 0) {
-        result *= 2;
-        n--;
-    }
-    return result;
-}
-
-int tribonacci(int n) {
-    return T(n);
-}
 
 //T(n+3) = T(n) + T(n+1) + T(n+2)
 //so:
