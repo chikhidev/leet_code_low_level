@@ -7,6 +7,7 @@ int minCostClimbingStairs(int* cost, int costSize){
     int i = 1;
     while (i < costSize){
         printf("%d\n", cost[i]);
+        i++;
     }
     return 0;
 }
