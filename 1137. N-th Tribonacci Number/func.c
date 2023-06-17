@@ -4,13 +4,14 @@ int tribonacci(int n){
     if (n==0) return 0;
     
     int *FAB = (int*)malloc((n + 1) * sizeof(int));
-    int target, counter = 0;
+    int target, i = 0;
 
     FAB[0] = 0;
     FAB[1] = FAB[2] = 1;
-    while (counter < (n + 1)){
-        printf("%d\n", *(FAB + counter));
-        counter++;
+    while (i < (n + 1)){
+        *(FAB + i) = *(FAB + i - 1) + *(FAB + i - 2);
+        printf("%d\n", *(FAB + i));
+        i++;
     }
 
     target = FAB[n];
