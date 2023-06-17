@@ -9,7 +9,7 @@ int tribonacci(int n){
     FAB[0] = 0;
     FAB[1] = FAB[2] = 1;
     while (counter < (n + 1)){
-        printf("%d", *(FAB + counter));
+        printf("%d\n", *(FAB + counter));
         counter++;
     }
 
