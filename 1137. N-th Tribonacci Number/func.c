@@ -1,6 +1,6 @@
 #include "main.h"
 
-int tribonacci(int n){
+int T(int n){
     if (n==0) return 0;
     
     int *FAB = (int*)malloc((n + 1) * sizeof(int));
@@ -20,4 +20,10 @@ int tribonacci(int n){
     return target;
 }
 
+int tribonacci(int n) {
+    return (T(n + 3) - (T(n + 1) - T(n + 2)));
+}
+
 //T(n+3) = T(n) + T(n+1) + T(n+2)
+//so:
+//T(n) = - T(n+1) - T(n+2) + T(n+3)
