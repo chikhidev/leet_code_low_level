@@ -16,7 +16,7 @@ int tribonacci(int n){
         i++;
     }
 
-    target = FAB[n];
+    target = *(FAB+ n);
 
     free(FAB);
     return target;
