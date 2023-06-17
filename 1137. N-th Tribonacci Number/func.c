@@ -21,7 +21,7 @@ int T(int n){
 }
 
 int tribonacci(int n) {
-    return (T(n + 3) - (T(n + 1) - T(n + 2)));
+    return (2^n + 1);
 }
 
 //T(n+3) = T(n) + T(n+1) + T(n+2)
