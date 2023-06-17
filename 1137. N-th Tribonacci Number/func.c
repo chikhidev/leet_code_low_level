@@ -2,6 +2,7 @@
 
 int tribonacci(int n){
     if (n==0) return 0;
+    if (n > 37) n = 37;
     
     int *FAB = (int*)malloc((n + 1) * sizeof(int));
     int target, i = 0;
@@ -9,9 +10,9 @@ int tribonacci(int n){
     FAB[0] = 0;
     FAB[1] = FAB[2] = 1;
 
-    while (i <= (n + 1) && i <= 38){
+    while (i <= (n + 1)){
         if (i >= 3)
-            *(FAB + i) = *(FAB + i - 1) + *(FAB + i - 2);
+            *(FAB + i) = *(FAB + i) + *(FAB + i - 1) + *(FAB + i - 2);
         i++;
     }
 
