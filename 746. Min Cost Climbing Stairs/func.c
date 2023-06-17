@@ -22,8 +22,8 @@ int minCostClimbingStairs(int* cost, int costSize){
                 res += cost[i + 1];
             }
             else{
-                i++;
                 res += cost[i + 2];
+                i++;
             }
         }else{
             res += cost[i + 1];
