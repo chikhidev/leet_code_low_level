@@ -1,7 +1,7 @@
 #include "main.h"
 
 int main() {
-    int cost1[] = {10, 15, 20};
+    int cost1[] = {1,100,1,1,1,100,1,1,100,1};
     int costSize1 = sizeof(cost1) / sizeof(cost1[0]);
     int result1 = minCostClimbingStairs(cost1, costSize1);
     printf("Minimum cost for cost1: %d\n", result1);
