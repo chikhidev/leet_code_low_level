@@ -9,17 +9,15 @@ int tribonacci(int n){
     FAB[0] = 0;
     FAB[1] = FAB[2] = 1;
     while (i <= n){
-        if (i >= 3){
+        if (i >= 3)
             *(FAB + i) = *(FAB + i - 1) + *(FAB + i - 2);
-        }
-        printf("%d\n", *(FAB + i));
         i++;
     }
 
     target = FAB[n];
 
     free(FAB);
-    return 0;
+    return target;
 }
 
 //T(n+3) = T(n) + T(n+1) + T(n+2)
