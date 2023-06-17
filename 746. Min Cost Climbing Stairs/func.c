@@ -28,8 +28,8 @@ int minCostClimbingStairs(int* cost, int costSize){
         }else{
             res += cost[i + 1];
         }
+        printf("at: %d", cost[i]);
         i++;
-
     }
     printf("res in the func: %d\n", res);
     return res;
