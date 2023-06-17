@@ -5,6 +5,8 @@
 
 int minCostClimbingStairs(int* cost, int costSize){
     if(costSize == 0) return 0;
+    if(costSize == 3) return cost[1];
+
     int i, res = 0;
 
     if (cost[0] < cost[1]){
@@ -17,7 +19,7 @@ int minCostClimbingStairs(int* cost, int costSize){
     };
 
     while (i < costSize){
-        if(cost[i + 1] && cost[i + 2]){
+        if(i + 1 < costSize && i + 2 < costSize){
             if (cost[i + 1] < cost[i + 2]){
                 res += cost[i + 1];
             }
