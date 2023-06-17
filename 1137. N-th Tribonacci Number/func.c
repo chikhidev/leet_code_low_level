@@ -31,7 +31,7 @@ int POWER(int n) {
 }
 
 int tribonacci(int n) {
-    return (POWER(2) + 1);
+    return (POWER(n) + 1);
 }
 
 //T(n+3) = T(n) + T(n+1) + T(n+2)
