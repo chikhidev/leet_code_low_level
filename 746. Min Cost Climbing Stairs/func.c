@@ -11,16 +11,16 @@ int minCostClimbingStairs(int* cost, int costSize){
     int i, res = 0;
 
     if (cost[0] < cost[1]){
-        i = 0;
+        i = 1;
         res += cost[0];
         printf("init with: %d\n", cost[0]);
     }
     else{
-        i = 1;
+        i = 2;
         res += cost[1];
         printf("init with: %d\n", cost[1]);
     };
-    //0, 0, 0, 1
+    //0, 1, 0, 1
     while (i < costSize){
         if(i + 2 < costSize && ((cost[i + 1] + cost[i + 2]) != 0 )){
             if (cost[i + 1] < cost[i + 2]){
