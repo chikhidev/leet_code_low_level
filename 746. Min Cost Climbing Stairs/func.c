@@ -29,7 +29,7 @@ int minCostClimbingStairs(int* cost, int costSize){
                 printf("%d less than %d\tres: %d\n", cost[i + 1], cost[i + 2], res);
             }else if (cost[i + 1] == cost[i + 2]){
                 res += cost[i + 1];
-                printf("%d less than %d\tres: %d\n", cost[i + 1], cost[i + 2], res);
+                printf("%d =  %d\tres: %d\ti: %d\n", cost[i + 1], cost[i + 2], res, i);
                 i++;
             }
             else{
