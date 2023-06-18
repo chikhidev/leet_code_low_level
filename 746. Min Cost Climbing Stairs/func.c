@@ -17,21 +17,20 @@ int minCostClimbingStairs(int* cost, int costSize){
         i = 1;
         res += cost[1];
     };
-
+    //0, 0, 0, 1
     while (i < costSize){
-        if(i + 1 < costSize && i + 2 < costSize){
-            if (cost[i + 1] < cost[i + 2]){
+        if(i + 2 < costSize && ((cost[i + 1] + cost[i + 2]) != 0 )){
+            if (cost[i + 1] < cost[i + 2])
                 res += cost[i + 1];
-            }
-            else{
+            else
                 res += cost[i + 2];
-                i++;
-            }
-        }else{
+            i+=2;
+        }else if (i + 1 < costSize && cost[i + 1] != 0){
             res += cost[i + 1];
+            i++;
+        }else{
+            break;
         }
-        printf("at: %d\n", cost[i]);
-        i++;
     }
     return res;
 }
